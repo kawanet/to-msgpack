@@ -1,0 +1,39 @@
+{
+  "name": "to-msgpack",
+  "description": "ES6 msgpack encoder",
+  "version": "0.1.0",
+  "author": "@kawanet",
+  "bugs": {
+    "url": "https://github.com/kawanet/to-msgpack/issues"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.44",
+    "@types/node": "^8.0.55",
+    "msgpack-test-js": "^0.1.1"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "env": {
+      "node": true,
+      "commonjs": true
+    }
+  },
+  "homepage": "https://github.com/kawanet/to-msgpack#readme",
+  "keywords": [
+    "es6",
+    "messagepack",
+    "msgpack"
+  ],
+  "license": "MIT",
+  "main": "to-msgpack.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kawanet/to-msgpack.git"
+  },
+  "scripts": {
+    "test": "./test/50.msgpack-test-js.js"
+  },
+  "typings": "typings/to-msgpack.d.ts"
+}
