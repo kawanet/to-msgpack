@@ -1,12 +1,14 @@
-# ES6 msgpack encoder
+# UNDER DEVELOPMENT - ES6 msgpack encoder
 
 [![Build Status](https://travis-ci.org/kawanet/to-msgpack.svg?branch=master)](https://travis-ci.org/kawanet/to-msgpack)
 
-This provides a driver to run the msgpack compatibility test suite.
-
 ### Synopsis
 
-TBD
+```js
+const msgpack = require("to-msgpack").toMsgpack();
+
+msgpack.encode({"some": "value"}); // => <Buffer 81 a4 73 6f 6d 65 a5 76 61 6c 75 65>
+```
 
 ### GitHub
 

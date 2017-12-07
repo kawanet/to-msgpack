@@ -6,10 +6,15 @@
   "bugs": {
     "url": "https://github.com/kawanet/to-msgpack/issues"
   },
+  "dependencies": {
+    "from-msgpack": "github:kawanet/from-msgpack"
+  },
   "devDependencies": {
     "@types/mocha": "^2.2.44",
     "@types/node": "^8.0.55",
-    "msgpack-test-js": "^0.1.1"
+    "eslint": "^4.12.1",
+    "mocha": "^4.0.1",
+    "msgpack-test-js": "github:kawanet/msgpack-test-js#wip"
   },
   "eslintConfig": {
     "parserOptions": {
@@ -27,13 +32,15 @@
     "msgpack"
   ],
   "license": "MIT",
-  "main": "to-msgpack.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kawanet/to-msgpack.git"
   },
   "scripts": {
-    "test": "./test/50.msgpack-test-js.js"
+    "eslint": "./node_modules/.bin/eslint .",
+    "mocha": "./node_modules/.bin/mocha test",
+    "test": "npm run eslint && npm run mocha"
   },
   "typings": "typings/to-msgpack.d.ts"
 }

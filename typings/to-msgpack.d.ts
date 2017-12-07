@@ -2,9 +2,13 @@
  * @see https://github.com/kawanet/to-msgpack
  */
 
-declare export class toMsgpack
+export declare function toMsgpack(options?: object): ToMsgpack;
+
+declare class ToMsgpack
 {
-	static encoder(options?: object): Encoder;
+	encode(value: any): Buffer;
+
+	createEncoder(): Encoder;
 }
 
 declare class Encoder
