@@ -7,14 +7,16 @@
     "url": "https://github.com/kawanet/to-msgpack/issues"
   },
   "dependencies": {
-    "from-msgpack": "github:kawanet/from-msgpack"
+    "liberal-buffer": "github:kawanet/liberal-buffer",
+    "msg-interface": "github:kawanet/msg-interface"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.44",
     "@types/node": "^8.0.55",
     "eslint": "^4.12.1",
     "mocha": "^4.0.1",
-    "msgpack-test-js": "github:kawanet/msgpack-test-js#wip"
+    "msgpack-test-js": "github:kawanet/msgpack-test-js#wip",
+    "nyc": "^11.3.0"
   },
   "eslintConfig": {
     "parserOptions": {
