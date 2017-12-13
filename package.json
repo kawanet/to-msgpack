@@ -16,7 +16,11 @@
     "eslint": "^4.12.1",
     "mocha": "^4.0.1",
     "msgpack-test-js": "github:kawanet/msgpack-test-js#wip",
-    "nyc": "^11.3.0"
+    "nyc": "^11.3.0",
+    "typescript": "^2.6.2"
+  },
+  "engines": {
+    "node": ">=6"
   },
   "eslintConfig": {
     "parserOptions": {
@@ -42,7 +46,8 @@
   "scripts": {
     "eslint": "./node_modules/.bin/eslint .",
     "mocha": "./node_modules/.bin/mocha test",
-    "test": "npm run eslint && npm run mocha"
+    "test": "npm run eslint && npm run mocha",
+    "tsc": "./node_modules/.bin/tsc"
   },
   "typings": "typings/to-msgpack.d.ts"
 }

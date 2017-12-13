@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var assert = require("assert");
-var _1 = require("../");
-var msgpack_test_js_1 = require("msgpack-test-js");
-var msgpack = _1.toMsgpack();
-var TITLE = __filename.split("/").pop();
+const assert = require("assert");
+const _1 = require("../");
+const msgpack_test_js_1 = require("msgpack-test-js");
+const msgpack = _1.toMsgpack();
+const TITLE = __filename.split("/").pop();
 // set 1 for types to run test
-var TEST_TYPES = {
+const TEST_TYPES = {
     array: 1,
     bignum: 0,
     binary: 1,
@@ -18,16 +18,16 @@ var TEST_TYPES = {
     string: 1,
     timestamp: 0
 };
-describe(TITLE, function () {
+describe(TITLE, () => {
     // find exams for types supported by the library
-    msgpack_test_js_1.Exam.getExams(TEST_TYPES).forEach(function (exam) {
+    msgpack_test_js_1.Exam.getExams(TEST_TYPES).forEach((exam) => {
         // test for encoding
-        exam.getTypes(TEST_TYPES).forEach(function (type) {
-            var title = type + ": " + exam.stringify(type);
-            it(title, function () {
-                var value = exam.getValue(type);
-                var buffer = msgpack.encode(value);
-                var hint = exam.stringify(0) + " != " + binaryToHex(buffer);
+        exam.getTypes(TEST_TYPES).forEach((type) => {
+            let title = type + ": " + exam.stringify(type);
+            it(title, () => {
+                let value = exam.getValue(type);
+                let buffer = msgpack.encode(value);
+                const hint = exam.stringify(0) + " != " + binaryToHex(buffer);
                 assert(exam.matchMsgpack(buffer), hint);
             });
         });
