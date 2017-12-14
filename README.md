@@ -5,7 +5,7 @@
 ### Synopsis
 
 ```js
-const msgpack = require("to-msgpack").toMsgpack();
+const msgpack = require("to-msgpack").createEncoder();
 
 msgpack.encode({"some": "value"}); // => <Buffer 81 a4 73 6f 6d 65 a5 76 61 6c 75 65>
 ```

@@ -1,10 +1,10 @@
 "use strict";
 
 import * as assert from "assert";
-import {toMsgpack} from "../";
+import {createEncoder} from "../";
 import {Exam} from "msgpack-test-js";
 
-const msgpack = toMsgpack();
+const msgpack = createEncoder();
 const TITLE = __filename.split("/").pop();
 
 // set 1 for types to run test

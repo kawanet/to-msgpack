@@ -4,9 +4,9 @@
 
 import {WritableBuffer} from "liberal-buffer";
 
-export declare function toMsgpack(options?: object): ToMsgpack;
+export declare function createEncoder(options?: object): MsgpackEncoder;
 
-declare class ToMsgpack {
+declare class MsgpackEncoder {
     encode(value: any): Buffer;
 
     createWritable(): MsgpackWritable;

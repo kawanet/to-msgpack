@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const assert = require("assert");
 const _1 = require("../");
-const msgpack = _1.toMsgpack();
+const msgpack = _1.createEncoder();
 const TITLE = __filename.split("/").pop();
 describe(TITLE, () => {
     it("msgpack.encode", () => {
